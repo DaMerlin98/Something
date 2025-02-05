@@ -1,0 +1,1203 @@
+#TEST 1
+#def greet():
+    #print("Hello")
+
+#greet()
+########################################################################################################################################################
+
+#TEST 2
+#def greet_w_argument(name = "World"):
+    #print(f"Hello, {name}!")
+
+#greet_w_argument()
+#greet_w_argument("Martin")
+########################################################################################################################################################
+
+#TEST 3
+#user_number_input = input("Enter a number")
+
+#try:
+    #number = float(user_number_input)
+    #print("You entered:", number)
+#except ValueError:
+    #print("The number you put is incorrect. Try another one, please")
+########################################################################################################################################################
+
+#TEST 4
+#try:
+#    int(input("Type a number: "))
+#except ValueError:
+#    print("That is not a number! Try again!")
+########################################################################################################################################################
+
+#TEST 5
+#try:
+#    input("Press any key to takeoff!")
+#except TypeError:
+#    print("That is not a key!")
+########################################################################################################################################################
+
+#TEST 6
+#import sys
+
+#Choices = "ABCX"
+#userChoice = None
+
+#print("[A] - option 1")
+#print("[B] - option 2")
+#print("[C] - option 3")
+#print("[X] - Exit")
+
+#while userChoice is None:
+#    try:
+#        userChoice = input("Please enter a option: A, B, C. You can press X to leave")
+#        if userChoice.upper() not in Choices:
+#            raise ValueError
+#        if userChoice.upper() == 'X':
+#            print("Have a nice day!")
+#            sys.exit()
+#        print("Alright, thanks for your response! Let's proceed")
+#        break
+#    except ValueError:
+#        print("The key you entered is not valid, try again")
+#        userChoice = None
+########################################################################################################################################################
+
+#TEST 7
+
+#import random
+#import sys
+#import time
+
+#keys = "WASD"
+#keyCombos = ["WWSD",
+#             "ASWD",
+#             "DSWA",
+#             "ADWS",
+#             "DASS"]
+#userTyper = ""
+
+#def game_combo_messages():
+#    print("lorem ipsum dolor sit amet consectetur adipiscing elit")
+#    time.sleep(5)
+#    print("Press this combo that will appear on your screen")
+#    time.sleep(5)
+   
+#    while True:
+#        current_combo = random.choice(keyCombos)
+#        print(f"Enter this combo: {current_combo}")
+#        try:
+#            userTyper = input().upper()
+#            sys.exit()
+#            if userTyper != current_combo:
+#                raise ValueError
+#            print("Nice One! Next beat")
+#        except ValueError:
+#            print("The keys you typed in are not correct. Please try again.")
+
+#game_combo_messages()
+########################################################################################################################################################
+
+#TEST 8
+#using .append()
+#import time
+
+#name = []
+
+#name.append("M")
+#print(name)
+#time.sleep(1)
+#name.append("A")
+#print(name)
+#time.sleep(1)
+#name.append("R")
+#print(name)
+#time.sleep(1)
+#name.append("T")
+#print(name)
+#time.sleep(1)
+#name.append("I")
+#print(name)
+#time.sleep(1)
+#name.append("N")
+#print(name)
+
+########################################################################################################################################################
+
+#TEST 9
+#using .pop()
+#You cannot add a letter to the .pop() like this ".pop("N")". It is not designed for that purpose as it will only remove the letter.
+#Plus, it is written differently than the .append() because you need to add a variable to it and print the variable and the list.
+
+#my_list = ["M", "A", "R", "T", "I", "N"]
+
+#removed_letter = my_list.pop()
+#print(removed_letter)
+#print(my_list)
+
+#Another example
+
+#import time
+
+#my_list = ["M", "A", "R", "T", "I", "N"]
+
+#removed_letter = my_list.pop()
+#print(removed_letter)
+#print(my_list)
+#time.sleep(1)
+#removed_letter = my_list.pop()
+#rint(removed_letter)
+#rint(my_list)
+#time.sleep(1)
+#removed_letter = my_list.pop()
+#print(removed_letter)
+#print(my_list)
+#time.sleep(1)
+#removed_letter = my_list.pop()
+#print(removed_letter)
+#print(my_list)
+#time.sleep(1)
+#removed_letter = my_list.pop()
+#print(removed_letter)
+#print(my_list)
+#time.sleep(1)
+#removed_letter = my_list.pop()
+#print(removed_letter)
+#print(my_list)
+#time.sleep(1)
+
+#And yes you can have the same variable when removing a letter 
+
+########################################################################################################################################################
+
+#TEST 10
+#using the .len() function
+# You cannot use it like this 
+# something = 5
+# print(len(something))
+
+#Use it like this
+#something = "Martin"
+#print(len(something))
+
+#or like this
+#my_list = [1, 2, 3, 4, 5]
+#print(len(my_list))
+
+#It will print out the length of your list
+########################################################################################################################################################
+
+# TEST 11  
+
+#var1 = ""
+
+#while var1 not in ("1", "2", "3"):
+#    var2 = int(input("Enter the number next"))
+#    if var2 == 4:
+#        print("Correct! Here is the new list", var1)
+#        break
+#    else:
+#        print("That is incorrect.")
+#        break
+
+########################################################################################################################################################
+
+# TEST 12
+
+#import random
+#import time
+#import sys
+
+#passwordchar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+#passwordnum = ["2", "1", "3", "5", "4", "6", "7", "9", "8", "0"]
+#passwordmix = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "2", "1", "3", "5", "4", "6", "7", "9", "8", "0"]
+
+#try:
+#    passwordlength = int(input("Hello and welcome to the password generator! Please enter how long you want your password to be. Recommendation 4 - 10 but it is up to you! "))
+#except ValueError:
+#    print("That is not a valid number!")
+#else:
+#    print("Success!")
+
+#tryagainattempts = 0
+
+#while tryagainattempts < 5:
+#    passchoicetype = input("Choose a password either char or num or if you want, then mix. And if you want to leave, do so by pressing X on your keyboard. ")
+#    if passchoicetype == "x":
+#        print("Alright, it's been a pleasure knowing you, bye!")
+#       sys.exit()
+#   elif passchoicetype == "num":
+#        random_num_password = random.sample(passwordnum, passwordlength)
+#        print("Success! Please wait while we prepare your password! Don't exit please as this should only take 5 seconds and your password will be printed and ready to go!")
+#        time.sleep(5)
+#        print(random_num_password)
+#        print("Here you go! Enjoy!")
+#        break
+#    elif passchoicetype == "char":
+#        random_char_password = random.sample(passwordchar, passwordlength)
+#        print("Success! Please wait while we prepare your password! Don't exit please as this should only take 5 seconds and your password will be printed and ready to go!")
+#        time.sleep(5)
+#        print(random_char_password)
+#        print("Here you go! Enjoy!")
+#        break
+#    elif passchoicetype == "mix":
+#        random_mix_password = random.sample(passwordmix, passwordlength)
+#        print("Success! Please wait while we generate your password! Don't exit please as this should only take 5 seconds and your password will be printed and ready to go!")
+#        time.sleep(5)
+#        print(random_mix_password)
+#        print("Here you go! Enjoy!")
+#        break
+#    else:
+#        tryagainattempts += 1
+#        print("Sorry but we can't print your password. Please try again. Attempts:", tryagainattempts)
+#        if tryagainattempts > 4:
+#            print("Sorry but you have wasted all of your attempts. Please come back another time.")
+#            break
+
+########################################################################################################################################################
+
+# TEST 13
+
+#file = open("myfile.txt", "r")
+#text = file.read()
+#print(text)
+
+#For the "myfile.txt", you need to add your own file else it won't work
+
+########################################################################################################################################################
+
+# TEST 14
+#The "global" is a useless function and should be avoided most of the time
+#x = " Python"
+
+#def idk():
+#    global x
+#    print("I love" + x)
+#
+# idk()
+
+########################################################################################################################################################
+
+# TEST 15
+
+#import random
+#import time
+#import sys
+
+#def koinflip():
+#    result = random.randint(0, 3)
+#    time.sleep(1)
+#    print("And the result is", ["heads", "tails", "none", "that you did not flip the coin"][result])
+#    return
+
+#join = input("Hello and welcome to coin flipper! Would you like to join? Type in 'Yes' (lowercase) and you may proceed! ")
+#if join == "yes":
+#    koinflip()
+#else:
+#    sys.exit()
+
+########################################################################################################################################################
+
+#TEST 16 
+
+#import random
+#import time
+
+#result = random.randint(0, 10)
+
+#def game():    
+#    print("Alright, here we go!")
+#    time.sleep(2)
+#    print("Can you try to guess what number I am?")
+#    try:
+#        guess = int(input("Please type your number here. "))
+#    except ValueError:
+#        print("That is not a number! Please try again")
+#    if guess == result:
+#        print("You guessed the number correctly, I am", result)
+#    elif guess > 10:
+#        print("You cannot print a number higher than 10 or less than 0! Try again")
+#    elif guess < 0:
+#        print("You cannot print a number less than 0 or higher than 10! Try again")
+#    else:
+#        print("I am", result)
+
+#game()
+
+########################################################################################################################################################
+
+#TEST 17
+
+#Rock, Paper, Scissors
+#import random
+
+#Rock = 0
+#Paper = 1
+#Scissors = 2
+
+#while True:
+#    computer_input = random.randint(0, 2)
+#    user_input = int(input("Which number do you pick? (From 0 to 2) "))
+
+#    if user_input > 2 or user_input < 0:
+#        print("You lose! You input an invalid number!")
+#        continue
+
+#    if computer_input == user_input:
+#        print("It's a tie!")
+#    elif (computer_input == Rock and user_input == Scissors) or \
+#         (computer_input == Paper and user_input == Rock) or \
+#         (computer_input == Scissors and user_input == Paper):
+#        print("You lose!")
+#    else:
+#        print("You win!")
+
+#    response = input("Do you want to play again? (y/n) ")
+#    if response.lower() != 'y':
+#        break
+########################################################################################################################################################
+
+#TEST 18
+#import time 
+
+#try_again_attempts = 0
+#food_board = ["1. Fish & Chips",
+#              "2. Biscuits", 
+#              "3. Pizza"]
+
+#print("Hello and welcome to the menu! Press C to continue")
+
+#while try_again_attempts < 5:
+#    user_input = input()
+#    if user_input == "c":
+#        print("Great, you may proceed!")
+#    else:
+#        try_again_attempts += 1
+#        print("Sorry but you entered the wrong key, please try again! Your attempts: ", try_again_attempts)
+#        if try_again_attempts > 4:
+#            print("Sorry but you have wasted your attempts! Please come back later!")
+#            break
+
+#def food_menu(food_board):
+#    print("What can I get for you today?")
+#    time.sleep(3)
+#    print("We have this (please wait some time)")
+#    time.sleep(10)
+#    print(food_board, "This is what we have. Make your order.")
+#    try_again_attempts_2 = 0
+#    max_attempts = 4
+#    while try_again_attempts < 4:
+#        try:
+#            make_order_input = int(input("Type in the number (1 - 3 for now, we will add more)"))
+#            if 1 <= make_order_input <= 3:
+#                print(f"You've selected option {make_order_input}. Enjoy your meal!")
+#                break
+#            else:
+#                print("Please enter a number between 1 and 3.")
+#        except ValueError:
+#            print("You cannot type in a number less than 1 or greater than 3")
+#        try_again_attempts_2 += 1
+#        if try_again_attempts_2 >= max_attempts:
+#            print("You've reached the maximum number of attempts. Please try again later.")
+
+#food_menu(food_board)
+
+########################################################################################################################################################
+
+#TEST 19
+
+#class penaldog():
+#    def __init__(self, breed, age):
+#        self.breed = breed
+#        self.age = age
+
+#    def me(self):
+#        print(f"I'm a {self.breed} and I'm {self.age} years old") 
+
+# __init__ method is a special method that initializes the object’s attributes when it’s created.
+
+########################################################################################################################################################
+
+#TEST 20
+
+#class Animal:
+#    def talk(self):
+#        print("This is generic")
+
+#class Cat(Animal):
+#    def talk(self):
+#        print("meow")
+
+########################################################################################################################################################
+
+#TEST 21
+
+#class Animal:
+#    def __init__(self, name):
+#        self.name = name
+#    def coms(self):
+#        print("Random sound")
+
+#class Dog(Animal):
+#    def coms(self):
+#        print("Woof woof!")
+
+#class Cat(Animal):
+#    def coms(self):
+#        print("Meow!")
+
+#my_Dog = Dog(name="Ryan")
+#my_Cat = Cat(name="Simon")
+
+#my_Dog.coms()
+#my_Cat.coms()
+
+########################################################################################################################################################
+
+#TEST 22
+#class Cat:
+#    def __init__(self, name, color):
+#        self.name = name
+#        self.color = color
+#        self.toys = []
+
+#    def meow(self):
+#        print("Meow")
+
+#    def add_toy(self, toy):
+#        self.toys.append(toy)
+
+#    def has_toy(self, toy):
+#        return toy in self.toys
+
+#my_cat = Cat(name="Whiskers", color="Gray")
+#my_cat.meow()
+
+#my_cat.add_toy("ball of yarn")
+#if my_cat.has_toy("ball of yarn"):
+#    print("Cat has the ball of yarn")
+
+########################################################################################################################################################
+
+#TEST 23 - Decorators 
+
+#def decorator(function):
+#    def my_function():
+#        print("Something will happen")
+#        function()
+#        print("Something will happen")
+#        return my_function
+    
+#def say_hello():
+#    print("Hi!")
+#say_hello()
+########################################################################################################################################################
+
+#TEST 24
+
+#my_city = "Atlanta"
+#for character in my_city:
+#    print(character)
+
+#my_city2 = ["Atlanta", "New York", "Los Angeles", "Chicago", "Miami", "Jacksonville"]
+#for index, cities in enumerate(my_city2):
+#    print(f"{index}, {cities}")
+
+#Tip: Think of the "For" as For each
+# For the indexes, you need to add enumerate()
+
+########################################################################################################################################################
+
+#TEST 25
+
+#try:
+#    value = input()
+#except IndexError:
+#    print("invalid index")
+#finally:
+#    print("Do some cleanup")
+########################################################################################################################################################
+
+#TEST 26
+
+#Board = ["-", "-", "-",
+#         "-", "o", "-",
+#         "-", "-", "-"]
+
+#def Board_Display():
+#    print(Board[0] + " | " + Board[1] + " | " + Board[2])
+#    print("--------")
+#    print(Board[3] + " | " + Board[4] + " | " + Board[5])
+#    print("--------")
+#    print(Board[6] + " | " + Board[7] + " | " + Board[8])
+
+#def value():
+#    user_number_input = input("Enter a number")
+#    try:
+#        number = float(user_number_input)
+#        print("You entered:", number)
+#    except ValueError:
+#        print("The number you put is incorrect. Try another one, please")
+
+#def make_move(player, position):
+#    if Board[position] == "-":
+#        Board[position] = player
+#        Board_Display()
+#    else:
+#        print("This position is already taken. Try another one.")
+
+#def game_win_positions(player):
+#    combos = [
+#        [0, 1, 2], [3, 4, 5], [6, 7, 8],  
+#        [0, 3, 6], [1, 4, 7], [2, 5, 8],  
+#        [0, 4, 8], [2, 4, 6]
+#    ]
+
+#    for combo in combos:
+#        if Board[combo[0]] == Board[combo[1]] == Board[combo[2]] == player:
+#                return True
+#        return False
+
+#while True:
+#    option = input("Welcome to Tic Tac Toe! Do you want to play? Choose either Y or N: ")
+#    if option not in ["Y", "y", "n", "N"]:
+#        print("Sorry, but this option is invalid. Type in either Y or N.")
+#    elif option in ["Y", "y"]:
+#        print("You go first")
+#        Board_Display()
+#        while "-" in Board:
+#            position = int(input("Choose your move (0-8): "))
+#            if position in range(9):
+#                if make_move("x", position):
+#                    break
+#            else:
+#                print("Invalid position. Please choose a number between 0 and 8.")
+#        break
+#    elif option in ["N", "n"]:
+#        print("Goodbye")
+#        break
+########################################################################################################################################################
+#TEST 27
+#import random
+#import time
+
+#print("Hello and welcome to Marry, Fuck, Kill!")
+#time.sleep(5)
+
+#name = input("Please type in your name and you're set to go. Use characters ONLY! ")
+
+#while True:
+#    try:
+#        int(name)
+#        print("Only characters are allowed, please try again")
+#    except ValueError:
+#        print(f"Received character input: {name}. You may proceed")
+#        break
+
+#def game():   
+#    while True: 
+#        thing1 = input("Type in the first one. ")
+#        thing2 = input("Type in the second one. ")
+#        thing3 = input("Now type in the final one. ")
+
+#        options = [thing1, thing2, thing3]
+
+#        marry_choice = random.choice(options)
+#        options.remove(marry_choice)
+
+#        fuck_choice = random.choice(options)
+#        options.remove(fuck_choice)
+
+#        kill_choice = options[0]
+
+#        print("Now it's my turn to play. I may add more so I apologize if I do.")
+#        time.sleep(2)
+#        print(f"For the marry option, I would choose: {marry_choice}.")
+#        time.sleep(2)
+#        print(f"For the fuck choice, I would choose {fuck_choice}.")
+#        time.sleep(2)
+#        print(f"And finally for the kill choice, I would choose {kill_choice}.")
+
+#        while True:
+#            feedback = input("Do you have any feedback? ")
+#            if not feedback.strip():
+#                continue
+#            break
+
+#time.sleep(10)
+#print("Alright, so now you can type in some of your family members, idols/celebrities or whatever you like.")
+#time.sleep(5)
+#print("e.g. you can type in the first one as a family member, second as celebrity and the third as both and I will try to say my opinion.")
+#time.sleep(10)
+
+#while True:
+#    answer_to_statement = input("Sounds good with you? ")
+#    if answer_to_statement.lower() == "yes":
+#        print("Alright, let's move on")
+#        game()
+#    else:
+#        print("Alright, then I guess bye...")
+#        break
+
+########################################################################################################################################################
+#TEST 28
+
+#Format conversions
+#number = 200
+
+#print(f"number: {number:.2f}")
+
+#print(f"hex: {number:#0x}")
+
+#print(f"binary {number:b}")
+
+#print(f"octal: {number:o}")
+
+#print(f"scientific: {number:e}")
+
+#print(f"Number {number:09}")
+
+########################################################################################################################################################
+#TEST 29
+#from datetime import timedelta
+#delta = timedelta(
+#    days=30,
+#    seconds=60,
+#    microseconds=10,
+#    milliseconds=29000,
+#    minutes=2,
+#    hours=8,
+#    weeks=2
+#)
+
+#print(delta)
+
+########################################################################################################################################################
+#TEST 30
+#from datetime import timedelta 
+#year = timedelta(days=365)
+#additional_year = timedelta(weeks=40, days=84, hours=23,
+#                            minutes=50, seconds=600)
+#year == additional_year
+
+#year.total_seconds()
+
+#print(year)
+#print(additional_year)
+
+########################################################################################################################################################
+#TEST 31
+#def astimezone(self, tz):
+#    if self.tzinfo is tz:
+#        return self
+#    utc = (self - self.utcoffset()).replace(tzinfo=tz)
+#    return tz.fromutc(utc)
+
+########################################################################################################################################################
+#TEST 31
+#class Players():
+#    def __init__(self, name):
+#        """Initialize the player's attributes."""
+#        self.name = name
+#        self.level = 'novice'
+#        self.score = 0
+#        self.moves = []
+
+#    def win_points(self, points, move):
+#        """Update player on winning points."""
+#        self.score += points
+#        self.moves.append(move)
+
+########################################################################################################################################################
+#TEST 32
+#class Game:
+#    def __init__(self):
+#        """Initialize the game with an empty list of players."""
+#        self.players = []
+
+#    def add_player(self, player):
+#        """Add a new player to the game."""
+#       self.players.append(player)
+
+#    def start_round(self):
+#        """Begin a new round of the game."""
+#        print("Starting a new round!")
+
+#    def end_game(self):
+#        """End the game and declare a winner."""
+#        if not self.players:
+#            print("No players in the game.")
+#            return
+#       
+#       winner = sorted(self.players, key=lambda p: p.score, reverse=True)[0]
+#       print(f"The winner is {winner.name} with {winner.score} points!")
+
+#    def display_rankings(self):
+#        """Display player rankings by score."""
+#        print("Player Rankings:")
+#        for rank, player in enumerate(sorted(self.players, key=lambda p: p.score, reverse=True), start=1):
+#            print(f"{rank}. {player.name} - {player.score} points")
+
+
+#player1 = input()
+#player2 = input()
+
+#game = Game()
+#game.add_player(player1)
+#game.add_player(player2)
+
+#game.start_round()
+#player1.win_points(50, "Move A")
+#player2.win_points(30, "Move B")
+#game.end_game()
+#game.display_rankings()
+
+########################################################################################################################################################
+
+#from datetime import datetime
+
+#inventory = [
+#    {"name": "Milk", "stock_level": 10, "expiration_date": datetime(2024, 11, 5)},
+#    {"name": "Bread", "stock_level": 5, "expiration_date": datetime(2024, 10, 30)},
+#    {"name": "Eggs", "stock_level": 12, "expiration_date": datetime(2024, 11, 1)},
+#    {"name": "Butter", "stock_level": 2, "expiration_date": datetime(2024, 12, 1)}
+#]
+
+#inventory_sorted_by_stock = sorted(inventory, key=lambda item: item["stock_level"])
+
+#inventory_sorted_by_expiration = sorted(inventory, key=lambda item: item["expiration_date"])
+
+#print("Products sorted by stock level (low to high):")
+#for item in inventory_sorted_by_stock:
+#    print(f"{item['name']} - Stock: {item['stock_level']}")
+
+#the \n is crucial for formatting
+#print("\nProducts sorted by expiration date (soonest first):")
+#for item in inventory_sorted_by_expiration:
+#    print(f"{item['name']} - Expires on: {item['expiration_date'].date()}")
+
+########################################################################################################################################################
+
+# TEST ??
+#this is for upper advanced. This should replace the "print"
+
+#import logging 
+
+#logging.warning('Be careful')
+
+########################################################################################################################################################
+#install requests to make this work
+#import requests
+
+#url = "https://x.com/agicheetah"
+
+#try:
+   # response = requests.get(url)
+  #  if response.status_code == 200:
+ #       print("Success!")
+#   elif response.status_code == 404:
+#        print("File not found. Try again")
+#    elif response.status_code == 403:
+#        print("Forbidden access")
+#    else:
+#        print("Server Error", response.status_code)
+
+#except requests.exceptions.RequestException as e:
+#    print("There was an error", e)
+
+########################################################################################################################################################
+
+#install tweepy to make this work
+
+#import tweepy
+
+#api_key = "YOUR_API_KEY"
+#api_secret = "YOUR_API_SECRET"
+#access_token = "YOUR_ACCESS_TOKEN"
+#access_secret = "YOUR_ACCESS_SECRET"
+
+#auth = tweepy.OAuthHandler(api_key, api_secret)
+#auth.set_access_token(access_token, access_token_secret)
+#api = tweepy.API(auth)
+
+#username = "agicheetah"
+#try:
+#    user = api.get_user(screen_name=username)
+#    print("User ID:", user.id)
+#    print("Name:", user.name)
+#    print("Bio:", user.description)
+#    print("Location:", user.location)
+#    print("Followers Count:", user.followers_count)
+#except tweepy.TweepError as e:
+#    print("An error occurred:", e)
+
+########################################################################################################################################################
+
+#class Task:
+#    def __init__(self, name, category, deadline):
+#        self.name = self
+#        self.category = category
+#        self.deadline = deadline
+
+#    def task(self):
+#        print(f"Here is a task, {self.name}\nCategory: {self.category}\nDeadline: {self.deadline}")
+
+#    def update(self, name=None, category=None, deadline=None):
+#        if name:
+#            self.name = name
+#        if category:
+#            self.category = category
+#        if deadline:
+#            self.deadline = deadline
+
+########################################################################################################################################################
+#import random
+#import time
+
+#task_number = int(input("How many tasks do you intend on setting? "))
+#tasks = []
+
+#for _ in range(task_number):
+#    task = input("Enter a task ")
+#    tasks.append(task)
+
+#continue1 = input("Do you want to start? (Press C to continue): ")
+
+#for task_number, task in enumerate(tasks, start=1):
+#    print(f"{task_number}. {task}")
+
+#def task_setter():
+#    while True:
+#        user_input = input("Enter the task number to mark it as complete or press C to continue: ").lower()
+#        if user_input == "c":
+#            print("Proceeding, please wait...")
+#            break
+
+#        elif user_input.isdigit() and 1 <= int(user_input) <= len(tasks):
+#                task_index = int(user_input) - 1
+#               tasks[task_index] = f"{tasks[task_index]} (Completed)"
+#                print(f"Task '{tasks[task_index]}' marked as complete.")
+#        else:
+#            print("Invalid input, please enter a valid task number or 'C' to continue.")
+
+#if continue1.strip().lower() == 'c':
+#    task_setter()
+#else:
+#    print("You chose not to continue.")
+
+########################################################################################################################################################
+#import webbrowser
+
+#websites = ["twitter.com", 
+#            "reddit.com",
+#            "youtube.com",
+#            "chatgpt.com"
+#]
+
+#url = 'https://www.google.com/'
+
+#webbrowser.open_new_tab(url)
+
+########################################################################################################################################################
+
+#import turtle as t
+#from random import random
+
+#for i in range(100):
+#    steps = int(random() * 100)
+#    angle = int(random() * 360)
+#    t.right(angle)
+#    t.fd(steps)
+
+########################################################################################################################################################
+
+#import turtle
+
+#for i in range(100):
+#    turtle.position()
+
+#    turtle.forward(100)
+#    turtle.position()
+
+#    turtle.forward(-70)
+#    turtle.position()
+
+#    turtle.right(110)
+#    turtle.position()
+
+#    turtle.left(80)
+#    turtle.position()
+
+#    turtle.heading()
+
+#    turtle.right(100)
+#    turtle.heading()
+
+########################################################################################################################################################
+
+#import turtle
+
+#for i in range(4):
+
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.heading()
+#    turtle.forward(200)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.heading()
+#    turtle.forward(200)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+#    turtle.position()
+#    turtle.left(90)
+#    turtle.position()
+#    turtle.forward(100)
+    
+#######################################################################################################################################################
+
+#import turtle
+
+
+#for i in range(100):
+#    turtle.pos()
+#    turtle.setx(50)
+#    turtle.pos()
+
+#    turtle.pos()
+#    turtle.sety(-50)
+#    turtle.pos()
+#    turtle.forward(100)
+#    turtle.pos()
+#    turtle.left(15)
+#    turtle.forward(50)
+
+#######################################################################################################################################################
+#import sys
+#import random
+#import time
+
+#class Creature:
+#    def __init__(self):
+#        """Initialize creature with name, health, and damage."""
+#        self.max_health = 500
+#        self.min_health = 1
+#        self.dead_health = 0
+
+#        self.name = self.get_name() 
+#        self.health = self.get_health()  
+#        self.damage = self.get_damage() 
+
+#    def get_health(self):
+#        """Ask the user to enter health (5 attempts max)."""
+#        for i in range(5):
+#            try:
+#                health = int(input(f"Attempt {i+1}/5 - Enter your health here: "))
+#                
+#                if health < self.min_health:
+#                    print(f"❌ {health} is too low. Enter a number above {self.min_health}.")
+#                elif health > self.max_health:
+#                    print(f"❌ {health} is too high. Enter a number below {self.max_health}.")
+#                elif health == self.dead_health:
+#                    print(f"💀 You entered {health}. The creature is dead!")
+##                    return "Dead"
+#                else:
+#                    print(f"✅ Success! The creature's health is set to {health}!")
+#                    return health 
+
+#            except ValueError:
+#                print("❌ That is not a number, please try again.")
+
+ #       print("🚨 You have used all 5 attempts! The creature remains unhealthy.")
+ #       return None  
+    
+#    def get_damage(self):
+#        """Ask the user to enter the creature's damage (5 attempts max)."""
+#        for i in range(5):
+#            try:
+#                damage = int(input(f"Attempt {i+1}/5 - Enter the creature's damage: "))
+
+#                if damage < 0:
+#                    print(f"❌ {damage} is invalid. Damage cannot be negative. Try again!")
+#                else:
+#                    print(f"✅ Success! The creature's damage is set to {damage}!")
+#                    return damage 
+#            except ValueError:
+#                print("❌ That is not a number, please try again.")
+
+#        print("🚨 You have used all 5 attempts! The creature has no damage set.")
+#        return None  
+
+#    def get_name(self):
+#        """Ask the user to enter the creature's name (5 attempts max)."""
+#        for i in range(5):
+#            name = input("Enter a name for your creature: ").strip()#
+
+#            if name:
+#                print(f"✅ Success! Your creature's name is {name}!")
+#                return name #
+
+#            print("❌ Creature name cannot be empty. Please enter a valid name.")
+#
+#        print("🚨 You have used all 5 attempts! The creature remains nameless.")
+#        return None 
+
+#class Enemies:
+#    Health_Minimum = 100
+#    Health_Maximum = 1000
+#    Damage_Minimum = 10
+#    Damage_Maximum = 100
+#    Names_Of_Enemies = ["Kramus", "Slayer", "Crooker"]
+#    Valid_Combos = ["wdadswa", 
+#                    "sdawsda",
+#                    "adsdwda",
+#                    "sdwdsaw",
+#                    "dsawsds",
+#                    "sadwsad"]
+
+#    def __init__(self):
+##        """The enemies of your creature"""
+#        self.health = random.randrange(self.Health_Minimum, self.Health_Maximum)
+#        self.name = random.choice(self.Names_Of_Enemies)
+#        self.damage = random.randrange(self.Damage_Minimum, self.Damage_Maximum)
+ #   
+#    def attack(self):
+#        combo = random.choice(self.Valid_Combos)
+#        print("An enemy has just spawned!")
+#        time.sleep(5)
+ #       print("Looks like it is: ")
+#        time.sleep(5)
+#        print(f"It's a {self.name}!")
+#        time.sleep(5)
+#        print(f"The {self.name} is using the combo: {combo}")
+#        time.sleep(5)
+#
+#       correct_combo = input("Is the combo correct? (yes/no): ")
+#        if correct_combo.lower() == "yes":
+#            print(f"The {self.name} deals {self.damage} damage!")
+#        else:
+#            print(f"The {self.name} trips and falls, dealing 0 damage!")
+#            print(f"The {self.name} takes 20 damage from the fall!")
+#            self.health -= 20
+#            if self.health <= 0:
+#                print(f"The {self.name} has been defeated!")
+
+#def match_ready_up():
+#    """This will be the match ready up for your creature versing your enemies"""
+#    print("Are you ready for this match?")
+#    try:
+#        try_again_attempts = 1
+#        ready_for_match = input("Y = Yes | N = No ")
+     #   if ready_for_match.upper() == "Y":
+    #        print("Alright, let's go!")
+   #         enemy.attack()
+   #     elif ready_for_match.upper() == "N":
+   #         print("Alright, wait until you're ready, I will give you perhaps 5 minutes to take a break if you want? Does that sound Okay?")
+   #         Does_That_Sound_Okay = input("Y | N ")
+  #          if Does_That_Sound_Okay.upper() == "y":
+  #              print("Okay!")
+ #               time.sleep(300)
+#            elif Does_That_Sound_Okay.upper() == "n":
+#                print("Okay I guess...")
+#            else:
+#                print(f"Wrong key! You can only use Y or N. Please try again. Attempts {try_again_attempts}")
+#                try_again_attempts += 1
+#                if try_again_attempts == 6:
+#                    sys.exit("Bye!")
+#    except TypeError:
+#       print("That is not an answer!")
+
+
+#enemy = Enemies()
+#creature = Creature()
+#attempts_try_again = 1
+
+#if creature.health == "Dead":
+#    print("💀 Your creature has died!")
+#elif creature.health is None or creature.damage is None or creature.name is None:
+#    print("❌ Game over! You did not set up your creature properly!")
+#else:
+#    print(f"🎉 Your creature {creature.name} is ready with {creature.health} health and {creature.damage} damage! Ready for battle? Press C to continue! ")
+#    for attempt in range(5):
+      #  try:
+      #      continue_to_game = input()
+     #       if continue_to_game == "c" or continue_to_game == "C":
+    #            match_ready_up()
+   #         else:
+   #             print(f"Incorrect key. Please try again. Attempts: {attempts_try_again} out of 5")
+   #             attempts_try_again += 1
+  #              if attempts_try_again == 6:
+ #                   print("You have wasted all your attempts!")
+ #                   sys.exit("Try again later")
+ #       except TypeError:
+#            print("That is not a letter! Try again please.")
+#            print(f"{attempt+1} out of 5 attempts remaining!")
+#            if attempt == 6:
+#                print("You have wasted all your attempts!")
+#                sys.exit("Try again later")
+
+#######################################################################################################################################################
+
+
+
+#######################################################################################################################################################
+#FOR THE LATEST NEWS, but I do not have pip installed
+
+#import requests
+#import os
+#from bs4 import BeautifulSoup
+#import random
+#user_agents = [
+#    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+#    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+#    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/537.36",
+#    "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.129 Mobile Safari/537.36",
+#]
+
+#headers = {"User-Agent": random.choice(user_agents)}
+
+
+#def latest_news():
+#    url = 'https://docs.python.org/3/' #URL
+#    headers = {"User-Agent": random.choice(user_agents)} #THROUGH WHERE
+#    response = requests.get(url, headers=headers) 
+    
+#    if response.status_code == 200:
+#        soup = BeautifulSoup(response.text, "html.parser")
+#        headlines = soup.find_all("h2", class_="card-title")[:5]  # Get top 5 headlines
+        
+#        print("Latest Python News:")
+#        for index, headline in enumerate(headlines, start=1):
+#            print(f"{index}. {headline.text.strip()}")
+#    else:
+#        print("Failed to fetch news. Please try again later.")
+
+#if __name__ == "__main__":
+#    latest_news()
